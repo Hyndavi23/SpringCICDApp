@@ -39,7 +39,7 @@ pipeline {
                 bat '''
                 docker stop spring-cicd-container || exit 0
                 docker rm spring-cicd-container || exit 0
-                docker run -d -p 9090:9090 --name spring-cicd-container spring-cicd-app
+                docker run -d -p 9091:8080 --name spring-cicd-container spring-cicd-app
                 '''
             }
         }
